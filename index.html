@@ -88,31 +88,44 @@
   .css("font-size", Math.floor(Math.random() * 100));
 
   // 4
-  const newListElement = $("<li>")
+  const $newListElement = $("<li>")
     .text("JaeWon and Axa are the best coders!");
 
-    $("ol").append(newListElement);
+  const $newListElement2 = $("<li>", {text: "Test"})
+
+    $("ol").append($newListElement);
+    $("ol").append($newListElement2);
 
   // 5
-  const apology = $("<p>")
+
+  const $apology = $("<p>")
     .text("Sorry for existing");
 
   $("aside")
   .empty()
-  .append(apology);
+  .append($apology);
 
   // 6
   $(".form-control")
   .on("change", (e) => {
       e.preventDefault();
 
-      let forms = $(".form-control");
-      const r = $(".row .mb-5 > nth-child-of").val();
-      const g = $("input:nth-of-type(2)").val();
-      const b = $("input:nth-of-type(3)").val();
+      const $forms = $(".form-control");
+      const r = $forms.eq(0).val();
+      const g = $forms.eq(1).val();
+      const b = $forms.eq(2).val();
       console.log("r:",r," g:",g," b:",b);
-      console.log("forms: ",forms);
+
       $("body").css("background-color",`rgb(${r},${g},${b})`);
+  })
+
+  // 7
+  $("img")
+  .on("click", $e => {
+    // e.preventDefault();
+    console.log("$e: ", $e)
+    $e.target.remove();
+
   })
 
 
