@@ -1,0 +1,32 @@
+body{
+  background-color: lightblue;
+}
+
+table{
+  background-color: lightpink;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+td{
+  text-align: center;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+th{
+  font-size: 1.3rem;
+  width: 400px;
+}
+
+td {
+  padding: 5px;
+  border-color: black;
+}
+
+button {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: palegreen;
+}
